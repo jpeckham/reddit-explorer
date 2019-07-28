@@ -1,0 +1,25 @@
+{
+  "name": "reddit-explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpeckham/reddit-explorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpeckham/reddit-explorer/issues"
+  },
+  "homepage": "https://github.com/jpeckham/reddit-explorer#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0"
+  }
+}
