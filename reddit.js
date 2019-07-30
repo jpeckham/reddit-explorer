@@ -33,7 +33,50 @@ const me = async function(params){
     return resp.data
 }
 
+const userAbout = async function(params){
+    //note when using bearer tokens you then go to oauth.reddit.com
+    resp = await axios
+        .get(`https://oauth.reddit.com/user/${params.username}/about`,
+            {
+                headers: {
+                    Authorization: 'bearer '+ params.access_token
+                }
+            })
+        .catch(function (err) { throw err })
+    
+    return resp.data
+}
+const by_id = async function(params){
+    //note when using bearer tokens you then go to oauth.reddit.com
+    resp = await axios
+        .get(`https://oauth.reddit.com/by_id/${params.names}`,
+            {
+                headers: {
+                    Authorization: 'bearer '+ params.access_token
+                }
+            })
+        .catch(function (err) { throw err })
+    
+    return resp.data
+}
+const top = async function(params){
+    //note when using bearer tokens you then go to oauth.reddit.com
+    resp = await axios
+        .get(`https://oauth.reddit.com/top`,
+            {
+                headers: {
+                    Authorization: 'bearer '+ params.access_token
+                }
+            })
+        .catch(function (err) { throw err })
+    
+    return resp.data
+}
+
 module.exports = {
     access_token,
-    me
+    me,
+    userAbout,
+    by_id,
+    top
 }
